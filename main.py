@@ -114,8 +114,8 @@ class WebScraper:
         soup = BeautifulSoup(html, 'html.parser')
         products = []
         
-        # Note: This is a placeholder implementation. 
-        # You need to adjust the selectors based on the target website's structure
+        # This is a placeholder implementation. 
+        # Need to adjust the selectors based on the target website's structure just taken as per the Question example
         for product_element in soup.select('.product-item'):
             title = product_element.select_one('.product-title').text.strip()
             price = float(product_element.select_one('.product-price').text.strip().replace('$', ''))
